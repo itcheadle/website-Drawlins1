@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Exploring GManchester</title>
+<link rel="stylesheet" href="css_for_home_page_gnb.css">
+
+</head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<body>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="#"> <img style=width:80% src="Logo for website final.PNG" alt=Logo> </a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#"> <img style=width:16% src="Community icon.png" alt=Icon> Community</a>
+    <a href="#"> <img style=width:16% src="Info icon.png" alt=Icon> Information</a>
+    <a href="#"> <img style=width:16% src="Destination icon.png" alt=Icon> Popular places</a>
+    <a href="#"> <img style=width:16% src="About icon.png" alt=Icon> About </a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+    <h2 style = font-size:90px;font-family:candara;text-align:center; > <B> Green is the <BR> new black </B> </h2>
+  </div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "400px";
+  document.getElementById("main").style.marginLeft = "400px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</body>
+</html>
