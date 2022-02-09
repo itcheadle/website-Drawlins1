@@ -111,7 +111,7 @@ a:active {
 /* If the screen size is 600px or less*/
 @media only screen and (max-width: 600px) {
   img {
-    width: 325px;
+    width: 225px;
   }
 }
 
