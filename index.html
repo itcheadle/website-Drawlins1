@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+<title> ExploringGManchester</title>
+<link rel="stylesheet" href="css_gnb.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+</head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- This is the side navigation bar and all it's images -->
+<body>
+  <p class="pmain" id="main">
+    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+  </p>
+  <div id="mySidebar" class="sidebar">
+    <a href= "#home"> <img style=width:80% src="images/logo_for_website_final.PNG" alt=Logo> </a>
+    <a href="#community"> <img style=width:16% src="images/community_icon.png" alt=Icon> Community</a>
+    <a href="#information"> <img style=width:16% src="images/info_icon.png" alt=Icon> Information</a>
+    <a href="#pop_place"> <img style=width:16% src="images/destination_icon.png" alt=Icon> Top Places</a>
+    <a href="#about"> <img style=width:16% src="images/about_icon.png" alt=Icon> About </a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  </div>
+  
+
+  <!-- Each section of the website -->
+  <div class="divmain" id="home">
+    <p class="head"> <B> Green is the new black </B> </p>
+    <img style= width:100%; src="images/background_gnb3.png" alt=Background-Image>
+  </div>
+<br>
+  <div class="divmain" id="community">
+    <p class="head"> <B> Community </B> </p>
+    <img style= width:100%; src="images/background_com.png" alt=Background-Image>
+    <br>
+    <div class="divsub">
+    <p class="smallp"> <b>This is the community page, this is where Mancunians have gone in their local area, if you want to post a good bike route or a good place to walk the dog, feel free to post <br> Keep in mind this comment section is monitored<b></p>
+
+<!-- Comment section-->
+
+<section id="app">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="comment">
+      <p v-for="items in item" v-text="items"></p>
+        </div><!--End Comment-->
+        </div><!--End col -->
+        </div><!-- End row -->
+    <div class="row">
+      <div class="col-6">
+    <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+        <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+      </div><!-- End col -->
+    </div><!--End Row -->
+  </div><!--End Container -->
+</section><!-- end App -->
+
+<!--End of comment section-->
+
+  <br><br>
+  </div>
+<br>
+  <div class="divmain" id="information">
+    <p class="head"> <B> Information </B> </p>
+    <img style= width:100%; src="images/background_information.png" alt=Background-Image> 
+    <p class="smallp">Content coming once completed, this is early access and not the full site</p>
+  </div>
+<br>
+
+  <div class="divmain" id="pop_place">
+    <p class="head"> <B> Top places </B> </p>
+    <img style= width:100%; src="images/background_pop_place.png" alt=Background-Image> <br><br><br>
+    <p class="pmain" > <B> The nicest parks according to reviews (Images included)</p> <br>
+      <div class=divsub>
+    <p class="pmain" > 4.9/5 Werneth Low Country Park </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11897.079923989479!2d-2.0629047530945286!3d53.43378096343034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb58a4a021059%3A0xa4e7e885170d1ea8!2sWerneth%20Low!5e1!3m2!1sen!2suk!4v1644401425020!5m2!1sen!2suk" width="98%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <p class="smallp"> Located in Tameside, this country park is a good place for horse riding, cycling and having a picnic. It is easily accessable with plently of foot paths, mostly wheelchair friendly and 3 car parks. The main appeal would be it's height, it is high enough to be a good look out point to see all of Manchester and even Liverpool on clear days. Credit to David Dixon for this photo of Werneth. This is a link for further information: <a href=https://www.tameside.gov.uk/wernethlow/guide>Tameside.gov</a> </p>
+      <img style=border:solid#2D2F39;border:20px; src="images/Werneth.jpg" alt=Picture-Werneth>
+  <br><br><br><br>
+
+    <p class="pmain" > 4.7/5 Styal Country Park </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.4898168821687!2d-2.2496279839894613!3d53.34485478252389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d612ead8bdb%3A0xc37c340cf135bd41!2sStyal%20Country%20Park!5e1!3m2!1sen!2suk!4v1644400999657!5m2!1sen!2suk" width="98%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <p class="smallp"> Located in Wilmslow, this country park is a good place for dog owners and having a picnic. It is easily accessable with plently of foot paths with 1 car park. The main appeal would be it's quarry walk, it is very picturesque and most parts of the walk are forestested or are by the small river Bollin. Credit to mapio.net for this photo of Styal. This is a link for further information: <a href=https://www.manchestersfinest.com/articles/weekend-walks-styal-country-park>Manchestersfinest.com</a> </p>
+      <img style=border:solid#2D2F39;border:20px; src="images/Styal.jpg" alt=Picture-Styal>
+  <br><br><br><br>
+
+    <p class="pmain" > 4.7/5 Tandle Hill Country Park </p> 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.394814913307!2d-2.148492283983112!3d53.5747582652784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb9a2cd32d057%3A0x5fd19076e44bb26d!2sTandle%20Hill!5e1!3m2!1sen!2suk!4v1644400931643!5m2!1sen!2suk" width="98%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <p class="smallp"> Located in Oldham, this country park is a good place for families (especally the kids since it has play areas spread around the area), dog owners, cycling, bird watching and having a picnic. It is easily accessable with plently of foot paths and a bathrooms and cafes, mostly wheelchair friendly and 1 car parks. This is a very large area so is somewhere someone can go plenty of time with seeing all of it which is appealing transport wise, one trip many journeys. Credit to Cath Hebdon for this photo of Tandle Hill. This is a link for further information: <a href=https://www.oldham.gov.uk/info/200393/parks_countryside_and_canals/708/tandle_hill_country_park>Oldham.co.uk</a> </p>
+      <img style=border:solid#2D2F39;border:20px; src="images/Tandle.jpg" alt=Picture-Tandle>
+  <br><br><br><br>
+
+    <p class="pmain" > 4.6/5 Etherow Country Park </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.6032650125685!2d-2.055672683987562!3d53.41472737728799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb57f748adb89%3A0xcef4ed8bc63cb2f0!2sEtherow%20Country%20Park!5e1!3m2!1sen!2suk!4v1644400863729!5m2!1sen!2suk" width="98%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <p class="smallp"> Located in Romily, this country park is good for families and dog owners, it has places to eat, such as the Garden Centre which sells ice cream and the Etherow Cafe, activities such as Sailing, it has area has a parking area, completely wheelchair friendly area and a bathroom. The main route is scenic, quite small and circlular, ideal for photography. Near it is a golf course and Brabyns park which is also nice to visit. Credit to Eddie Cooke. This is a link for further information: <a href=http://www.etherowcountrypark.co.uk>Etherow.co.uk</a> </p>
+      <img style=border:solid#2D2F39;border:20px; src="images/Etherow.jpg" alt=Picture-Etherow>
+  <br><br><br><br>
+
+    <p class="pmain" > 4.6/5 Clifton Country Park </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.2291174114544!2d-2.348728983984208!3d53.53432216831532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487baf670ccb735f%3A0x2fd4cad20083963!2sClifton%20Country%20Park!5e1!3m2!1sen!2suk!4v1644400785657!5m2!1sen!2suk" width="98%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <p class="smallp"> Located in Salford, this country park is good for families and dog owners, if you get hungry you will have to leave the country park but only it only a few minutes outside the park are two pub restaurants and a dog friendly cafe, there's activities such as paintballing, it has a parking area that's wheelchair friendly, the park has circlular route with few paths the go off track. There's not much of a main route, but there's still no risk of getting lost, ideal for photography. Credit to Steve Allen. This is a link for further information: <a href=https://www.salford.gov.uk/parks-and-open-spaces/salford-parks/clifton-country-park>Salford.gov</a> </p>
+      <img style=border:solid#2D2F39;border:20px; src="images/Clifton.jpg" alt=Picture-Clifton>
+  <br><br><br><br>
+
+    <p class="pmain" > 4.5/5 Reddish Vale Country Park </p> 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.0352483036736!2d-2.148916083986905!3d53.437134975607826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb40cc2799b33%3A0xe93526db753c2dd5!2sReddish%20Vale%20Country%20Park!5e1!3m2!1sen!2suk!4v1644400737762!5m2!1sen!2suk" width="98%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <p class="smallp"> Located in Stockport, this country park is good for dog owners and friends, if you get hungry you will have to leave the country park or have icecream but only it only a 8 minutes outside the park is plenty of chippies, pubs, a restaurant and fastfood places, there's a really long stretch of river to walk through, it has area has a parking area and a large horse stables (if you are trusted to do so, you can ride a horse), the park has no main route so if you don't know your way around, you'd get lost. Good for photography. Credit to Pacer25 on TripAdviser. This is a link for further information: <a href=http://www.reddishvalecountrypark.com>ReddishVale.com</a> </p>
+      <img style=border:solid#2D2F39;border:20px; src="images/Reddish-Vale.jpg" alt=Picture-Reddish-Vale> <br> <br>
+    <p class=smallp> Althrough there's so many more parks, country parks, national parks, not every one of them can be mentioned here, it would simply be too much to sort through </p>
+  </div>
+    <br>
+
+  </div>
+<br>
+  <div class="divmain" id="about">
+    <p class="head"> <B> About </B> </p>
+    <img style= width:100%; src="images/background_about.png" alt=Background-Image>
+    <br><br>
+    <div class="divsub">
+    <p class=smallp> This website was made because of Hubbub, an organisation that is built around positive change, there was given 3 topics from Hubbub, this website is focused on Mancunians exploring their local greenspaces, it's good for mental health and it is good for local businesses. This is the link to their site <a href= https://www.hubbub.org.uk/what-we-do> Hubbub.org </a> <br> Another reason why this website has it's subject around people going outsite, people are statically very lazy, more and more people only go outside when they have to for school or work and it's not to anywhere nice either. I hope that more people know the benefits of going outdoors, for their mental health, physical health</p>
+    </div>
+    <br><br><br>
+
+  </div>
+
+
+<!-- This is the java script for opening an closing the navigation bar -->
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "400px";
+  document.getElementById("home").style.marginLeft = "400px";
+  document.getElementById("community").style.marginLeft = "400px"; 
+  document.getElementById("information").style.marginLeft = "400px";
+  document.getElementById("pop_place").style.marginLeft = "400px";
+  document.getElementById("about").style.marginLeft = "400px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0px";
+  document.getElementById("home").style.marginLeft = "0px";
+  document.getElementById("community").style.marginLeft = "0px";
+  document.getElementById("information").style.marginLeft = "0px";
+  document.getElementById("pop_place").style.marginLeft = "0px";
+  document.getElementById("about").style.marginLeft = "0px";
+}
+</script>
+
+
+<!-- The JS for comments section -->
+
+<!-- Vue JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<!-- jQuery -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+<script>
+    $(document).ready(function(){ 
+
+      $(".primaryContained").on('click', function(){
+      $(".comment").addClass("commentClicked");
+    });//end click
+    $("textarea").on('keyup.enter', function(){
+      $(".comment").addClass("commentClicked");
+    });//end keyup
+    });//End Function
+  
+  new Vue({
+      el: "#app",
+      data:{
+         title: 'Add a comment',
+        newItem: '',
+        item: [],
+      },
+      methods:{
+        addItem  (){
+        this.item.push(this.newItem);
+          this.newItem = "";
+        }
+    }
+  
+    });
+</script>
+
+</body>
+</html>
