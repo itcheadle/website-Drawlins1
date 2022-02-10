@@ -16,20 +16,20 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <!-- This is the side navigation bar and all it's images -->
-<body>
-  <p class="pmain" id="main">
-    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
-  </p>
-  <div id="mySidebar" class="sidebar">
-    <a href= "#home"> <img style=width:80% src="images/logo_for_website_final.PNG" alt=Logo> </a>
-    <a href="#community"> <img style=width:16% src="images/community_icon.png" alt=Icon> Community</a>
-    <a href="#information"> <img style=width:16% src="images/info_icon.png" alt=Icon> Information</a>
-    <a href="#pop_place"> <img style=width:16% src="images/destination_icon.png" alt=Icon> Top Places</a>
-    <a href="#about"> <img style=width:16% src="images/about_icon.png" alt=Icon> About </a>
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  </div>
-  
+<p class="pmain" id="main">
+  <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+</p>
+<div id="mySidebar" class="sidebar">
+  <a href= "#home"> <img style=width:80% src="images/logo_for_website_final.PNG" alt=Logo> </a>
+  <a href="#community"> <img style=width:16% src="images/community_icon.png" alt=Icon> Community</a>
+  <a href="#information"> <img style=width:16% src="images/info_icon.png" alt=Icon> Information</a>
+  <a href="#pop_place"> <img style=width:16% src="images/destination_icon.png" alt=Icon> Top Places</a>
+  <a href="#about"> <img style=width:16% src="images/about_icon.png" alt=Icon> About </a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+</div>
 
+<body>
+  
   <!-- Each section of the website -->
   <div class="divmain" id="home">
     <p class="head"> <B> Green is the new black </B> </p>
@@ -40,33 +40,31 @@
     <p class="head"> <B> Community </B> </p>
     <img style= width:100%; src="images/background_com.png" alt=Background-Image>
     <br>
+    <p class="pmain"> <b>This is the community page, this is where Mancunians have gone in their local area, if you want to post a good bike route or a good place to walk the dog, feel free to post <br> Keep in mind this comment section is monitored<b></p>
     <div class="divsub">
-    <p class="smallp"> <b>This is the community page, this is where Mancunians have gone in their local area, if you want to post a good bike route or a good place to walk the dog, feel free to post <br> Keep in mind this comment section is monitored<b></p>
+    <!-- Comment section-->
+    <section id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="comment">
+          <p v-for="items in item" v-text="items"></p>
+            </div><!--End Comment-->
+            </div><!--End col -->
+            </div><!-- End row -->
+        <div class="row">
+          <div class="col-6">
+        <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+            <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+          </div><!-- End col -->
+        </div><!--End Row -->
+      </div><!--End Container -->
+    </section><!-- end App -->
 
-<!-- Comment section-->
-
-<section id="app">
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <div class="comment">
-      <p v-for="items in item" v-text="items"></p>
-        </div><!--End Comment-->
-        </div><!--End col -->
-        </div><!-- End row -->
-    <div class="row">
-      <div class="col-6">
-    <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
-        <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
-      </div><!-- End col -->
-    </div><!--End Row -->
-  </div><!--End Container -->
-</section><!-- end App -->
-
-<!--End of comment section-->
-
-  <br><br>
+    <!--End of comment section-->
   </div>
+<br><br>
+
 <br>
   <div class="divmain" id="information">
     <p class="head"> <B> Information </B> </p>
@@ -114,7 +112,8 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.0352483036736!2d-2.148916083986905!3d53.437134975607826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb40cc2799b33%3A0xe93526db753c2dd5!2sReddish%20Vale%20Country%20Park!5e1!3m2!1sen!2suk!4v1644400737762!5m2!1sen!2suk" width="98%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       <p class="smallp"> Located in Stockport, this country park is good for dog owners and friends, if you get hungry you will have to leave the country park or have icecream but only it only a 8 minutes outside the park is plenty of chippies, pubs, a restaurant and fastfood places, there's a really long stretch of river to walk through, it has area has a parking area and a large horse stables (if you are trusted to do so, you can ride a horse), the park has no main route so if you don't know your way around, you'd get lost. Good for photography. Credit to Pacer25 on TripAdviser. This is a link for further information: <a href=http://www.reddishvalecountrypark.com>ReddishVale.com</a> </p>
       <img style=border:solid#2D2F39;border:20px; src="images/Reddish-Vale.jpg" alt=Picture-Reddish-Vale> <br> <br>
-    <p class=smallp> Althrough there's so many more parks, country parks, national parks, not every one of them can be mentioned here, it would simply be too much to sort through </p>
+    <p class=smallp> Althrough there's so many more parks, country parks, national parks, not every one of them can be mentioned here, it would simply be too much to sort through since Greater Manchester is a large place worth exploring yourself</p>
+    <img style=border:solid#2D2F39;border:20px; src="images/ManMap.png" alt=Picture-MapOfManchester> <br> <br>
   </div>
     <br>
 
