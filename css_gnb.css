@@ -1,0 +1,241 @@
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.divmain {
+  background-color: #2E6118;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.divsub {
+  background-color: #418822;
+  font-family: Arial, Helvetica, sans-serif;
+  position: center;
+  width: 95%;
+  border: 15px solid #4B1861;
+  padding: 40px;
+  margin: 20px;
+}
+
+a:link {
+  color: #5d37c4;
+  text-decoration: none;
+}
+a:visited {
+  color: lightblue;
+  text-decoration: none;
+}
+a:hover {
+  color: #4a8b2c;
+  text-decoration: underline;
+}
+a:active {
+  color: #c70039;
+  text-decoration: underline;
+}
+
+.head {
+  color: #f3F4F6;
+  font-size: 9vw; 
+  font-size:6.9vmin;
+  font-family: arial; 
+  text-align: center;
+}
+
+.smallp {
+  color: #f3F4F6;
+  font-size: 1vw; 
+  font-size:2.4vmin;
+  font-family: arial; 
+  text-align: left;
+  padding: 2px;
+}
+
+.pmain {
+  color: #f3F4F6;
+  font-size: 2vw; 
+  font-size:4vmin;
+  font-family: arial; 
+  text-align: left;
+  padding: 2px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/* If the screen size is 601px or more*/
+@media only screen and (min-width: 601px) {
+  img {
+    width: 58%;
+  }
+}
+
+/* If the screen size is 600px or less*/
+@media only screen and (max-width: 600px) {
+  img {
+    width: 100%;
+  }
+}
+
+.sidebar {
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #2D2F39;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-bottom: 100%;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #4a8b2c;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #365dae;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #2D2F39;
+  color: #f3F4F6;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #2E6118;
+}
+
+
+.container {
+	max-width: 640px;
+	margin: 30px auto;
+	background: #fff;
+	border-radius: 8px;
+	padding: 20px;
+}
+.comment {
+	display: block;
+	transition: all 1s;
+}
+.commentClicked {
+	min-height: 0px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	padding: 5px 10px
+}
+.container textarea {
+	width: 100%;
+	border: none;
+	background: #E8E8E8;
+	padding: 5px 10px;
+	height: 50%;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 2px solid #365dae;
+	transition: all 0.5s;
+	margin-top: 15px;
+}
+button.primaryContained {
+	background: #365dae;
+	color: #fff;
+	padding: 10px 10px;
+	border: none;
+	margin-top: 0px;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+	transition: 1s all;
+	font-size: 10px;
+	border-radius: 5px;
+}
+button.primaryContained:hover {
+	background: #c70039;
+}
+
+
+
+#main {
+  position:sticky;
+  top: 0;
+}
+
+#home {
+  transition: margin-left .5s;
+}
+#community {
+  transition: margin-left .5s;
+}
+#information {
+  transition: margin-left .5s;
+}
+#pop_place {
+  transition: margin-left .5s;
+}
+#about {
+  transition: margin-left .5s;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
