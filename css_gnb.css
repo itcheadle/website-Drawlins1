@@ -12,12 +12,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .divsub {
-  background-color: #3E8B19;
+  background-color: #418822;
   font-family: Arial, Helvetica, sans-serif;
   position: center;
   width: 95%;
-  border: 15px solid #365dae;
-  padding: 50px;
+  border: 15px solid #4B1861;
+  padding: 40px;
   margin: 20px;
 }
 
@@ -188,12 +188,12 @@ a:active {
 	padding: 5px 10px;
 	height: 50%;
 	border-radius: 5px 5px 0px 0px;
-	border-bottom: 2px solid #016BA8;
+	border-bottom: 2px solid #365dae;
 	transition: all 0.5s;
 	margin-top: 15px;
 }
 button.primaryContained {
-	background: #016ba8;
+	background: #365dae;
 	color: #fff;
 	padding: 10px 10px;
 	border: none;
